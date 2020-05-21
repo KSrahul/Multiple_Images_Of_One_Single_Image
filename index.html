@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple_Images_Of_One_Single_Image</title>
+    <style>
+        .imagesMain {
+          display: grid;
+          grid-template-columns: 25% 25% 25% 25%;
+          margin-bottom: 40px
+        }
+        img.images {
+          width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Multiple images of one single image.</h1>    
+<div class="imagesMain">
+  <img class="images" src="https://imagevars.gulfnews.com/2019/11/25/Kapil-Sharma-1574665484403_16ea1607876_large.jpg" />
+</div>
+  
+  
+  <script>
+      var r;      
+      for(r = 0; r < 11; r++){
+        var imageCont = document.querySelector(".imagesMain");
+        var mainImg = document.querySelector(".images").src;
+        var classN = document.querySelector(".images").className;
+        var imgItems =`<img class="${classN}" src="${mainImg}" >`
+        imageCont.innerHTML += imgItems;
+      }
+  </script>
+</body>
+</html>
